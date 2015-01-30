@@ -22,5 +22,20 @@ end
 # htmlの表示
 get '/form' do
 "<h2>This is a header!!!!</h2>
-this isnt header"
+
+<form action='/check' method='POST'>
+  <label>名前:</label>
+  <input type='text' name='name'>
+
+  <label>年齢:</label>
+  <input type='text' name='age'>
+
+  <input type='submit'>
+</form>
+"
+end
+
+# postでパラメータの受け取り
+post '/check' do
+  "#{params[:name]}さんは#{params[:age]}歳です。"
 end
