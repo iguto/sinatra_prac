@@ -2,7 +2,6 @@ require 'bundler'
 Bundler.require
 
 set :bind, '0.0.0.0'
-set :port, 9000
 
 # トップページ
 get '/' do
@@ -38,4 +37,10 @@ end
 # postでパラメータの受け取り
 post '/check' do
   "#{params[:name]}さんは#{params[:age]}歳です。"
+end
+
+
+# erbの利用
+get '/calc' do
+  erb :calc
 end
