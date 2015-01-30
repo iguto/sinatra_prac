@@ -33,3 +33,8 @@ end
 get '/calc' do
   erb :calc
 end
+
+# リダイレクトの利用
+get '/redirect' do
+  redirect '/form'
+end
