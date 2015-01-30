@@ -1,6 +1,9 @@
 require 'bundler'
 Bundler.require
 
+set :bind, '0.0.0.0'
+set :port, 9000
+
 # トップページ
 get '/' do
   "Hello Sinatra"
